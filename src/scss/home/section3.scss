@@ -1,0 +1,80 @@
+.hero3 {
+    display: flex;
+    height: 100%;
+
+    &__slider {
+        overflow: hidden;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+
+        @media (max-width: 980px) {
+            height: 300px;
+        }
+
+        &__button {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            z-index: 100;
+
+            & > a {
+                display: inline-flex;
+                width: 12px;
+                height: 12px;
+                background: black;
+                color: white;
+                text-decoration: none;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                margin-top: 20px;
+                position: relative;
+            }
+            & > a:active {
+                top: 1px;
+            }
+            & > a:focus {
+                background: #000;
+            }
+    
+            & a:not(:last-of-type) {
+                margin-right: 20px;
+            }
+        }
+
+        & .slides {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            height: 100%;
+
+            & > img {
+                background-size: cover;
+                object-fit: cover;
+                scroll-snap-align: start;
+                flex-shrink: 0;
+                width: 100%;
+                height: 100%;
+                margin-right: 50px;
+                background: #eee;
+                transform-origin: center center;
+                transform: scale(1);
+                transition: transform 0.5s;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 100px;
+
+                @media (max-width: 980px) {
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+        }
+    }
+}

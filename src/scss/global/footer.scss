@@ -1,0 +1,49 @@
+footer {
+    display: flex;
+    height: 350px;
+    background-color: #F3F3F3;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .description {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        align-items: end;
+
+        &__logo {
+            max-height: 42px;
+            margin-bottom: 30px;
+        }    
+
+        & h3 {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 34px;
+        }
+    
+        & p {
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+    @media (max-width: 980px) {
+        height: 670;
+
+        .description {
+            flex-direction: column;
+            align-items: flex-start;
+
+            &__logo {
+                height: 30px;
+
+            }    
+
+            & div {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
